@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>个人主页</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+    /* 顶栏样式 */
+    body {
+      /* 设置背景图的路径 */
+      background-image: url('img/background.png');
+      /* 设置背景图的显示方式，这里设置为覆盖整个视口并平铺 */
+      background-size: cover;
+      /* 设置背景图的位置为居中 */
+      background-position: center;
+      /* 取消背景图的固定，使其随着页面滚动 */
+      background-attachment: scroll;
+      margin: 0;
+      color: white;
+      
+    }
+    .top-bar {
+      height: 8vh;
+      margin-top: 0px;
+      background-color: #00000077;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      color: white;
+      backdrop-filter: blur(50px);
+      justify-content: space-between;
+    }
+
+    .logo {
+      height: 60%;
+      margin-right: 50px;
+    }
+
+    .menu {
+      margin-left: auto;
+    }
+
+    .menu a {
+      margin-right: 120px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 60px;
+      color: white;
+    }
+
+    /* 正文样式 */
+    .content {
+      text-align: center;
+      margin-top: 300px;
+      
+    }
+
+    .avatar {
+      border-radius: 50%;
+      width: 10%;
+      min-width: 300px;
+      object-fit: cover;
+    }
+
+    .id {
+      margin-top: 150px;
+      margin-bottom: 150px;
+      font-size: 24px;
+      font-weight: bold;
+      font-size: 100px;
+    }
+    
+    .contact {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+
+    .contact img {
+      width: 0.8em;
+      height: 0.8em;
+      margin-right: 40px;
+      vertical-align: middle;
+      font-size: 100px;
+    }
+    
+    .contact-box {
+      /* 创建圆角矩形区域 */
+      border-radius: 50px;
+      width: 75%;
+      max-width: 1500px;
+      margin: 0 auto;
+      /* 添加高斯模糊效果 */
+      backdrop-filter: blur(50px); /* 调整模糊强度，数值越大，模糊效果越明显 */
+      /* 添加边框和内边距等样式，根据需要自行调整 */
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      padding: 20px;
+      /* 其他样式属性，例如设置背景颜色、宽度等 */
+      font-size: 50px;
+      color: white;
+    }
+    
+    .contact a{
+      margin-top: 20px;
+      color: white;
+      text-decoration: none;
+    }
+
+  
+    </style>
+</head>
+<body>
+<!-- 顶栏 -->
+<div class="top-bar">
+    <img class="logo" src="img/snowy.png" alt="logo">
+    <div class="menu">
+        <a href="https://github.com/snowykami/snowykami.github.io">Github</a>
+        <a href="#">项目</a>
+        <a href="#">更多</a>
+        <!-- 添加更多按钮链接 -->
+    </div>
+    
+</div>
+
+<!-- 正文 -->
+<div class="content">
+    <img class="avatar" src="https://avatars.githubusercontent.com/u/79104275?v=4" alt="avatar">
+    <div class="id">SnowyKami</div>
+    
+    <div class="contact-box" align> <!-- 新添加的包含联系方式的区域 -->
+        <h2>联系方式</h2>
+  <!-- 在这里添加多行联系方式的内容 -->
+        <div class="contact">
+            <a href="https://space.bilibili.com/233938750"><img src="img/contact/bilibili.png" alt="bilibili"><span>bilibili</span></a>
+    <!-- 其他联系方式图标1 -->
+        </div>
+        <div class="contact">
+            <a href="https://space.bilibili.com/233938750"><img src="img/contact/twitter.png" alt="bilibili"><span>twitter</span></a>
+    <!-- 其他联系方式图标2 -->
+        </div>
+  <!-- 可以继续添加其他联系方式 -->
+    </div>
+</div>
+</body>
+</html>
