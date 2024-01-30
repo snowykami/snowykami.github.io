@@ -1,256 +1,288 @@
-<html>
+<html lang="zh">
 
 <head>
-  <title>SnowyKami's Page</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnowyKami's Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    /* 顶栏样式 */
-
-
-    @font-face {
-      font-family: HYWH;
-      src: url('font/HYWenHei-85W.ttf');
-    }
-
-    body {
-      /* 设置背景图的路径 */
-      background-image: url('img/bg.jpg');
-      /* 设置背景图的显示方式，这里设置为覆盖整个视口并平铺 */
-      background-size: cover;
-      /* 设置背景图的位置为居中 */
-      background-position: center;
-      /* 取消背景图的固定，使其随着页面滚动 */
-      background-attachment: scroll;
-      margin: 0;
-      color: white;
-      font-family: HYWH;
-
-    }
-
-    .top-bar {
-      height: 6vh;
-      margin-top: 0px;
-      margin-bottom: 0px;
-      background-color: #00000033;
-      display: flex;
-      align-items: center;
-      padding: 0 20px;
-      color: white;
-      backdrop-filter: blur(50px);
-      justify-content: space-between;
-    }
-
-    .logo {
-      height: 60%;
-      margin-right: 0px;
-      margin-left: 0px;
-    }
-
-    .menu {
-      margin-left: 0 auto;
-    }
-
-    .menu a {
-      margin-right: 0px;
-      margin-left: 30px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      font-size: 15px;
-      color: white;
-    }
-
-    .home a {
-      margin-right: 0px;
-      margin-left: 0px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 15px;
-      color: white;
-    }
+    <style>
+        /* 顶栏样式 */
 
 
-    /* 正文样式 */
-    .content {
-      text-align: center;
-    }
+        @font-face {
+            font-family: HYWH;
+            src: url('font/HYWenHei-85W.ttf');
+        }
 
-    .avatar {
-      margin-top: 100px;
-      border-radius: 50%;
-      width: 10%;
-      min-width: 150px;
-      object-fit: cover;
-    }
+        body {
+            /* 设置背景图的路径 */
+            background-image: url('img/bg.jpg');
+            /* 设置背景图的显示方式，这里设置为覆盖整个视口并平铺 */
+            background-size: cover;
+            /* 设置背景图的位置为居中 */
+            background-position: center;
+            /* 取消背景图的固定，使其随着页面滚动 */
+            /*background-attachment: scroll;*/
+            margin: 0;
+            color: white;
+            font-family: HYWH, serif;
 
-    .id {
-      margin-top: 40px;
-      margin-bottom: 80px;
-      font-size: 24px;
-      font-weight: bold;
-    }
+        }
 
-    .contact {
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
+        .top-bar {
+            height: 6vh;
+            margin-top: 0;
+            margin-bottom: 0;
+            background-color: #00000033;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            color: white;
+            backdrop-filter: blur(50px);
+            justify-content: space-between;
+        }
+
+        .logo {
+            height: 60%;
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .menu {
+            margin: 0 auto;
+        }
+
+        .menu a {
+            margin-right: 0;
+            margin-left: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            color: white;
+        }
+
+        .home a {
+            margin-right: 0;
+            margin-left: 0;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            color: white;
+        }
 
 
-    .contact img {
-      width: 1em;
-      height: 1em;
-      margin-right: 10px;
-      margin-left: 10px;
-      vertical-align: middle;
-    }
+        /* 正文样式 */
+        .content {
+            text-align: center;
+        }
 
-    .contact-box {
-      /* 创建圆角矩形区域 */
-      border-radius: 50px;
-      width: 75%;
-      max-width: 300px;
-      margin: 0 auto;
-      /* 添加高斯模糊效果 */
-      backdrop-filter: blur(50px);
-      /* 调整模糊强度，数值越大，模糊效果越明显 */
-      /* 添加边框和内边距等样式，根据需要自行调整 */
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      padding: 20px;
-      /* 其他样式属性，例如设置背景颜色、宽度等 */
-      font-size: 20px;
-      color: white;
-    }
+        .avatar {
+            margin-top: 100px;
+            border-radius: 50%;
+            width: 10%;
+            min-width: 150px;
+            object-fit: cover;
+        }
 
-    .contact a {
-      margin-top: 10px;
-      color: white;
-      text-decoration: none;
-    }
+        .id {
+            margin-top: 40px;
+            margin-bottom: 80px;
+            font-size: 24px;
+            font-weight: bold;
+        }
 
-    a {
-      margin-top: 0px;
-      color: white;
-      text-decoration: none;
-    }
+        .contact {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
 
-    .genshin-box {
 
-      border-radius: 10px;
-      width: 75%;
-      max-width: 400px;
-      margin: 20px auto;
-      /* 添加高斯模糊效果 */
-      backdrop-filter: blur(50px);
-      /* 调整模糊强度，数值越大，模糊效果越明显 */
-      /* 添加边框和内边距等样式，根据需要自行调整 */
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      padding: 20px;
-      /* 其他样式属性，例如设置背景颜色、宽度等 */
-      font-size: 20px;
-      color: white;
-    }
+        .contact img {
+            width: 1em;
+            height: 1em;
+            margin-right: 10px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
 
-    .genshin-box img {
-      width: 1.2em;
-      height: 1.2em;
-      margin-right: 2px;
-      margin-left: 2px;
-      vertical-align: middle;
-    }
-  </style>
+        .contact-box {
+            border-radius: 50px;
+            width: 75%;
+            max-width: 300px;
+            margin: 0 auto;
+            backdrop-filter: blur(50px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            font-size: 20px;
+            color: white;
+        }
+
+        .contact a {
+            margin-top: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        a {
+            margin-top: 0;
+            color: white;
+            text-decoration: none;
+        }
+
+        .genshin-box {
+            border-radius: 80px;
+            width: 75%;
+            max-width: 400px;
+            margin: 20px auto;
+            backdrop-filter: blur(50px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            font-size: 20px;
+            color: white;
+        }
+
+        .genshin-box img {
+            width: 1.2em;
+            height: 1.2em;
+            margin-right: 2px;
+            margin-left: 2px;
+            vertical-align: middle;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: white;
+        }
+
+        .other{
+            margin-top: 50px;
+            text-align: center;
+            color: white;
+        }
+
+
+        .button {
+            border-radius: 80px;
+            width: 75%;
+            max-width: 200px;
+            margin: 10px auto; /* 添加这一行来使按钮水平居中 */
+            backdrop-filter: blur(50px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 10px 5px;
+            font-size: 15px;
+            color: white;
+        }
+
+
+    </style>
 </head>
 
 <body>
-  <!-- 顶栏 -->
-  <div class="top-bar">
+<!-- 顶栏 -->
+<div class="top-bar">
     <img class="logo" src="img/snowy.png" alt="logo">
     <div class="menu">
-      <a href="/">SnowyKami</a>
-      <a href="https://github.com/snowykami/snowykami.github.io" target="_blank">Github</a>
-      <a href="/">项目</a>
-      <a href="more.html">更多</a>
-      <!-- 添加更多按钮链接 -->
+        <a href="/">SnowyKami</a>
+        <a href="https://github.com/snowykami/snowykami.github.io" target="_blank">Github</a>
+        <a href="/">项目</a>
+        <a href="more.html">更多</a>
+        <!-- 添加更多按钮链接 -->
     </div>
 
-  </div>
+</div>
 
-  <!-- 正文 -->
-  <div class="content">
-    <img class="avatar" src="http://q2.qlogo.cn/headimg_dl?dst_uin=2751454815&spec=100&t=1700936256603" alt="avatar">
+<!-- 正文 -->
+<div class="content">
+    <img class="avatar" src="https://q2.qlogo.cn/headimg_dl?dst_uin=2751454815&spec=100&t=1700936256603" alt="avatar">
     <a href="/">
-      <div class="id">SnowyKami</div>
+        <div class="id">SnowyKami</div>
     </a>
 
     <div class="contact-box"> <!-- 新添加的包含联系方式的区域 -->
-      <!-- 在这里添加多行联系方式的内容 -->
+        <!-- 在这里添加多行联系方式的内容 -->
 
-      <span class="contact">
+        <span class="contact">
         <a href="https://github.com/snowykami" target="_blank"><img src="img/contact/github.png" alt="github"></a>
       </span>
 
-      <span class="contact">
+        <span class="contact">
         <a href="https://gitee.com/snowykami" target="_blank"><img src="img/contact/gitee.png" alt="gitee"></a>
       </span>
 
-      <span class="contact">
+        <span class="contact">
         <a href="https://space.bilibili.com/233938750" target="_blank"><img src="img/contact/bilibili.png"
-            alt="bilibili"></a>
+                                                                            alt="bilibili"></a>
       </span>
-        
+
         <span class="contact">
         <a href="https://music.163.com/#/artist?id=46413018" target="_blank"><img src="img/contact/ncm.png"
-            alt="ncm"></a>
+                                                                                  alt="ncm"></a>
       </span>
 
-      <span class="contact">
+        <span class="contact">
         <a href="https://twitter.com/snowykami1145" target="_blank"><img src="img/contact/twitter.png"
-            alt="bilibili"></a>
+                                                                         alt="bilibili"></a>
       </span>
 
-      <span class="contact">
+        <span class="contact">
         <a href="https://qm.qq.com/q/aTBFSldjwI" target="_blank"><img src="img/contact/qq.png" alt="QQ"></a>
       </span>
-      <!-- 可以继续添加其他联系方式 -->
+        <!-- 可以继续添加其他联系方式 -->
     </div>
 
     <div class="genshin-box"> <!-- 新添加的包含联系方式的区域 -->
-      <!-- 在这里添加多行联系方式的内容 -->
-
-      原神！启动！</br>
-
-      <span class="contact">
+        <!-- 在这里添加多行联系方式的内容 -->
+        原神！启动！<br>
+        <span class="contact">
         <img src="img/genshin/pyro.png" alt="genshin">
       </span>
 
-      <span class="contact">
+        <span class="contact">
         <img src="img/genshin/hydro.png" alt="genshin">
       </span>
 
-      <span class="contact">
+        <span class="contact">
         <img src="img/genshin/anemo.png" alt="genshin">
       </span>
 
-      <span class="contact">
+        <span class="contact">
         <img src="img/genshin/electro.png" alt="genshin">
       </span>
 
-      <span class="contact">
+        <span class="contact">
         <img src="img/genshin/dendro.png" alt="genshin">
       </span>
 
-      <span class="contact">
+        <span class="contact">
         <img src="img/genshin/cryo.png" alt="genshin">
       </span>
 
-      <span class="contact">
+        <span class="contact">
         <img src="img/genshin/geo.png" alt="genshin">
       </span>
-      <!-- 可以继续添加其他联系方式 -->
+        <!-- 可以继续添加其他联系方式 -->
+    </div>
+    <div class="other">
+        <a href="https://liteyuki.icu" target="_blank">
+            <div class="button">Liteyuki Studio Index</div>
+        </a>
+        <a href="https://mc.liteyuki.icu" target="_blank">
+            <div class="button">Liteyuki Server</div>
+        </a>
+        <a href="https://bot.liteyuki.icu" target="_blank">
+            <div class="button">Liteyuki Bot</div>
+        </a>
+        <a href="https://meme.liteyuki.icu" target="_blank">
+            <div class="button">Liteyuki Memes</div>
+        </a>
     </div>
 
-  </div>
+
+</div>
+<footer>
+    © 2024 SnowyKami All Rights Reserved.
+</footer>
 </body>
 
 </html>
